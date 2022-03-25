@@ -18,17 +18,17 @@ const countdown = () => {
     document.querySelector('.minute').innerText = textMinute
     document.querySelector('.second').innerText = textSecond
 
-    if(gap <= 2000) {
-        var confettiSettings = { target: 'my-canvas' };
-        var confetti = new ConfettiGenerator(confettiSettings);
-        confetti.render();
-    }
-
     if(gap <= 0){
         document.querySelector('.day').innerText = 0
         document.querySelector('.hour').innerText = 0
         document.querySelector('.minute').innerText = 0
         document.querySelector('.second').innerText = 0
+    }
+
+    if(gap <= 0) {
+        var confettiSettings = { target: 'my-canvas' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
     }
 }
 
